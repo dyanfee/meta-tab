@@ -4,6 +4,8 @@ package-lock.json
 
 dist
 dist_zip
+*.7z
+*.zip
 out
 .git
 # local env files
