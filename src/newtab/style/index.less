@@ -1,0 +1,48 @@
+@import url("./transition.less");
+
+@color-white: #fff;
+@bg-opacity: 0.8;
+@primary: #2d82ea;
+
+:root {
+  --color-white: 255 255 255;
+  --bg-opacity: 0.8;
+  --primary: #2d82ea;
+  --hover: #E6F4F1;
+}
+body {
+  margin: 0 auto;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 8px; /*高宽分别对应横竖滚动条的尺寸*/
+  height: 1px;
+  transition: all 0.3s;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border-style: dashed;
+  border-color: transparent;
+  border-width: 2px;
+  background-color: #999;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

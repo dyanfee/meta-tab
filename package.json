@@ -1,0 +1,39 @@
+{
+  "name": "meta-tab",
+  "version": "0.0.1",
+  "author": "dyanfee@gmail.com",
+  "description": "chrome starter...",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "chrome-extension",
+    "vue",
+    "vite"
+  ],
+  "engines": {
+    "node": ">=14.18.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "watch": "nodemon --watch src --exec vite build",
+    "preview": "vite preview",
+    "fmt": "prettier --write '**/*.{vue,ts,json,css,scss,md}'"
+  },
+  "dependencies": {
+    "pinia": "^2.1.4",
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^1.0.12",
+    "@types/chrome": "^0.0.236",
+    "@types/node": "^20.4.5",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "less": "^4.1.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.13",
+    "vite-plugin-zip-pack": "^1.0.5",
+    "vue-tsc": "^0.38.2"
+  }
+}
