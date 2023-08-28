@@ -1,7 +1,7 @@
 <!--
- * @Author: yanfee duyf@changan.com.cn
+ * @Author: yanfee dyanfee@gmail.com
  * @Date: 2023-07-25 16:00:12
- * @LastEditors: yanfee duyf@changan.com.cn
+ * @LastEditors: yanfee dyanfee@gmail.com
  * @LastEditTime: 2023-08-16 10:46:19
  * @Description: 属性编辑弹窗
 --> 
