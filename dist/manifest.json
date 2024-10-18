@@ -11,7 +11,7 @@
     "128": "img/logo-128.png"
   },
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "pages/popup.html",
     "default_icon": "img/logo-48.png"
   },
   "background": {
@@ -21,7 +21,7 @@
   "content_scripts": [
     {
       "js": [
-        "css/aee32da8.js"
+        "assets/content-script-loader.index.ts.js.js"
       ],
       "matches": [
         "http://*/*",
@@ -42,23 +42,25 @@
     },
     {
       "matches": [
-        "http://*/*",
-        "https://*/*"
+        "<all_urls>"
       ],
       "resources": [
-        "js/9ad04a9e.js"
+        "**/*",
+        "*"
       ],
       "use_dynamic_url": true
     }
   ],
   "host_permissions": [
-    "*://*/*"
+    "https://*/",
+    "http://*/"
   ],
   "permissions": [
-    "tabs"
+    "tabs",
+    "contextMenus"
   ],
   "homepage_url": "https://www.yanfee.com",
   "chrome_url_overrides": {
-    "newtab": "index.html"
+    "newtab": "pages/index.html"
   }
 }

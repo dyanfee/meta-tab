@@ -1,5 +1,5 @@
 import { defineManifest } from '@crxjs/vite-plugin'
-import pkgJson from '../package.json'
+import pkgJson from './package.json'
 export default defineManifest({
   name: pkgJson.name,
   description: pkgJson.description,
@@ -13,17 +13,17 @@ export default defineManifest({
     128: 'img/logo-128.png',
   },
   action: {
-    default_popup: 'popup.html',
+    default_popup: 'pages/popup.html',
     default_icon: 'img/logo-48.png',
   },
   background: {
-    service_worker: 'src/background/index.ts',
+    service_worker: 'src/background/index',
     type: 'module',
   },
   content_scripts: [
     {
       matches: ['http://*/*', 'https://*/*'],
-      js: ['src/content/index.ts'],
+      js: ['src/content/index'],
     },
   ],
   web_accessible_resources: [
@@ -32,10 +32,10 @@ export default defineManifest({
       matches: [],
     },
   ],
-  host_permissions: [ "*://*/*" ],
-  permissions: ['tabs'],
+  host_permissions: ["https://*/", "http://*/"],
+  permissions: ['tabs', 'contextMenus'],
   homepage_url: 'https://www.yanfee.com',
   chrome_url_overrides: {
-    newtab: 'index.html',
-  },
+    newtab: 'pages/index.html',
+  }
 })

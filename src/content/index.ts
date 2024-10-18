@@ -1,3 +1,11 @@
-console.info('chrome-ext template-vue-ts content script')
+// import "./imgTool"
 
-export default {}
+import { createApp } from 'vue'
+import App from './Index.vue'
+
+const root = document.createElement('div')
+root.id = 'meta-content-root'
+document.body.append(root)
+
+const app = createApp(App)
+app.mount(root)
